@@ -1,0 +1,25 @@
+{
+    "name": "acspl-plus",
+    "displayName": "acspl_plus",
+    "description": "ACSPL+",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.58.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "acspl_plus",
+            "aliases": ["ACSPL+", "acspl_plus"],
+            "extensions": [".acs"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "acspl_plus",
+            "scopeName": "source.acspl_plus",
+            "path": "./syntaxes/acspl_plus.tmLanguage.json"
+        }]
+    }
+}

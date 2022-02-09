@@ -1,0 +1,46 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "ACSPL+",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#comment"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.acspl_plus",
+				"match": "\\b(AUTOEXEC|AXISDEF|BLOCK|BPTP|CONST|DISP|ELSE|ELSEIF|ENABLE|END|ENDS|FPOS|FVEL|GLOBAL|GO|HALT|IF|INT|LOOP|MST|ON|OUT|PTP|REAL|RET|START|STOP|SLLIMIT|SRLIMIT|STRUCT|TILL|VOID|WAIT|WHILE)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.acspl_plus",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.acspl_plus",
+					"match": "\\\\."
+				}
+			]
+		},
+    "comment": {
+      "name": "comment",
+      "begin": "!",
+      "end": "\n",
+			"patterns": [
+				{
+					"name": "comment.acspl_plus",
+					"match": "\\!\\."
+				}
+      ]
+    }
+	},
+	"scopeName": "source.acspl_plus"
+}
